@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Hobby's site</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<script language="javascript" src="jslib/jquery-1.6.min.js"></script>
+	<script language="javascript" src="jslib/wow.js"></script>
+	<script language="javascript" src="jslib/minwt.auto_full_height.mini.js"></script>
+	<meta name="Author" content="Hobby" />
+	<meta property="og:description" content="About Hobby Lee"></meta>
+
+	<script language="javascript">
+		$(document).ready(function() {
+			// 載入jQuery
+			new WOW().init();
+
+			// 回到頂端
+			$("#gotop").click(function(){
+		        	$('html,body').animate({scrollTop:0},1000);
+		    	});
+
+		    $(window).scroll(function() {
+
+				if ( $(this).scrollTop() > 300){
+			        $('#gotop').addClass("gotop");
+			    } else {
+			       $('#gotop').removeClass("gotop");
+			    }
+		    });
+
+			// 滑動至相對應位置
+           	$('a[href*=#]:not([href=#])').click(function() {
+               	var target = $(this.hash);
+               	$('html,body').animate({scrollTop: target.offset().top}, 1000);
+               	$(".menu").hide();
+               	return false;
+          	});
+
+          	// 漢堡選單
+	    	$("button").click(function(){
+	    		//展開/收起選單
+	    		$(".menu").slideToggle(200);  //0.2秒
+	    	});
+        });
+
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="gotop" class="gotop"></div>
+		<header>
+			<a href="index.html"><h1 class="logo">Hobby</h1></a>
+
+			<button id="burger_button"><img src="img/button.png" alt="Button"></button>
+
+			<div id="clear"></div>
+
+			<ul class="menu">
+				<li><a href="#about">About</a></li>
+				<li><a href="#skill">Skills</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#workexperience">Work</a></li>
+				<li><a href="#awards">Awards</a></li>
+				<li><a href="#collections">Collections</a></li>
+			</ul>
+
+			<div class="clear"></div>
+		</header>
+
+		<div class="main">
+			<div class="cover"> <!--  首頁 -->
+				<div class="content_center">
+				  	<h2>I'm Hobby Lee</br></h2>
+				  	<p> I am UX designer,</br> who will create the most wonderful view everywhere. </p>
+					<a class="gettoknowme_btn" href="#about">Get to Know Me</a>
+				</div>
+			</div>
+
+			<div class="about" id="about">
+				<div class="content_center">
+					<h2>ABOUT</h2>
+					<hr>
+					<div class="wow rollIn" data-wow-iteration="1"><img src="img/hobby2.png"></div>
+
+					<p>Hi! I'm Hobby.</br>
+					I designed this site </br>
+					so you can get to know more about me.</br>
+					Please sit back and enjoy!</p>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="skill" id="skill">
+				<div class="content_center">
+					<h2>SKILL</h2>
+					<hr>
+					<div class="wow pulse skill_block"  data-wow-iteration="2" data-wow-duration="0.5s">
+						<img src="img/front-end_black.png" alt="">
+						<h3>Front End Programming</h3>
+						<ul>
+							<li>- HTML & CSS -</li>
+							<li>- JavaScript -</li>
+							<li>- Node.js - </li>
+						</ul>
+					</div>
+
+					<div class="wow pulse skill_block"  data-wow-iteration="2" data-wow-duration="0.5s">
+						<img src="img/vd_black.png" alt="">
+						<h3>Visual Design</h3>
+						<ul>
+							<li>- Adobe Photoshop -</li>
+							<li>- Adobe Illustrator -</li>
+							<li>- Corel Painter -</li>
+						</ul>
+					</div>
+
+					<div class="wow pulse skill_block"  data-wow-iteration="2" data-wow-duration="0.5s">
+						<img src="img/language_black.png" alt="">
+						<h3>Language</h3>
+						<ul>
+							<li>- Chinese -</li>
+							<li>- English (TOEIC: 720) -</li>
+							<li>- Korean (Beginner) -</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="education p03" id="education">
+				<div class="content_center">
+					<h2 id="h2white">EDUCATION</h2>
+					<hr>
+					<div class="wow flipInX school_block">
+						<img src="img/mba_white.png" alt="">
+						<div class="school_block_right">
+							<h3>M.B.A. in Information Management</h3>
+							<h4>National University of Kaohsiung</h4>
+							<p>2015 - 2017</p>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="wow flipInX school_block">
+						<img src="img/bba_white.png" alt="">
+						<div class="school_block_right">
+							<h3>B.B.A. in Information Management</h3>
+							<h4>National University of Kaohsiung</h4>
+							<p>2008 - 2012</p>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="workexperience" id="workexperience">
+				<div class="content_center">
+					<h2>WORK EXPERIENCE</h2>
+					<hr>
+					<div id="cd-timeline" class="cd-container">
+						<!-- 方塊+中間圈圈+時間 -->
+						<div class="cd-timeline-block">
+							<!--  時間軸圈圈內圖案 -->
+							<div class="cd-timeline-img cd-odd">
+								<!-- <img src="img/cd-icon-picture.svg" alt="Picture"> -->
+							</div>
+							
+							<!-- 時間軸方塊內容 -->
+							<div class="wow bounceInDown cd-timeline-content">
+								<h3>Intern</h3>
+								<h4>Hoya Marketing & Technology Co., Ltd.</h4>
+								<ul>
+									<li>Design UX to increase user’s loyalty for social media app.</li>
+									<li>Apply visual design to align the brand image with marketing position.</li>
+								</ul>
+								<span class="cd-date">2015.08 - Now</span>
+							</div>
+						</div>
+
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-even">
+								<!-- <img src="img/cd-icon-movie.svg" alt="Movie"> -->
+							</div>
+
+							<div class="wow bounceInDown cd-timeline-content">
+								<h3>Marketing Department</h3>
+								<h4>MOPCON 2015 conference, Mobile Open Platform Conference</h4>
+								<ul>
+									<li>Sales Hit Southern Taiwan Record High: $300,000+ revenue with over 1,200 persons.</li>
+									<li>Formulate the marketing strategies in contents and propaganda for social media.</li>
+									<li>Perform content marketing with writing news feed on social media.</li>
+								</ul>
+								<span class="cd-date">2015.06-2015.11</span>
+							</div>
+						</div>
+
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-odd">
+								<!-- <img src="img/cd-icon-picture.svg" alt="Picture"> -->
+							</div>
+
+							<div class="wow bounceInDown cd-timeline-content">
+								<h3>Information engineer</h3>
+								<h4>C.Q.S. Industries Co., Ltd.</h4>
+								<ul>
+									<li>Design “Business Intelligence in Quality Assurance”. Gap analysis in user’s requirements.</li>
+									<li>Refine the operation process in user interface and measurement of product quality.</li>
+									<li>Integrate the cross-function process to implement ERP system.</li>
+								</ul>
+								<span class="cd-date">2013.03-2015.06</span>
+							</div>
+						</div>
+
+						<div class="cd-timeline-block">
+							<div class="cd-timeline-img cd-even">
+								<!-- <img src="img/cd-icon-movie.svg" alt="Movie"> -->
+							</div>
+
+							<div class="wow bounceInDown cd-timeline-content">
+								<h3>Assistant</h3>
+								<h4>Department of Information Management, NUK</h4>
+								<ul>
+									<li>Requirement analysis in web development.</li>
+									<li>Project management for tracking the schedule and  system quality.</li>
+									<li>Website management.</li>
+								</ul>
+								<span class="cd-date">2012.06-2013.02</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="awards" id="awards">
+				<div class="content_center">
+					<h2 >AWARDS</h2>
+					<hr>
+					<div class="wow bounceInRight awards-block" data-wow-delay="0.5s">
+						<div class="awards-pic">
+							<img src="img/award_star_white.png" alt="">
+							<p>2011</p>
+						</div>
+						<div class="awards-content">
+							<h3>The 16th International Innovative Services Contest</h3>
+							<ul>
+								<li>Business Practice: Gamificatoin with board games and supply chain</li>
+								<li>Design Thinking: Design processes to guide participant’s competitive strategies.</li>
+							</ul>
+						</div>
+						<div class="clear"></div> 
+					</div>
+					<div class="wow bounceInLeft awards-block" data-wow-delay="0.5s">
+						<div class="awards-pic">
+							<img src="img/award_3th_white.png" alt="">
+							<p>2010</p>
+						</div>
+						<div class="awards-content">
+							<h3>Yahoo E-Commerce Idea Competition </h3>
+							<ul>
+								<li>Identify new market opportunities in dessert market.</li>
+								<li>Over 20,000 visitors have browsed “Crazy Cheese” social website in 3 months.</li>
+							</ul>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="collections" id="collections">
+				<div class="content_center">
+					<h2 id="h2white">COLLECTIONS</h2>
+					<hr>
+					<div class="wow flipInX collections-block">
+						<img src="img/easygo.jpg" alt="">
+						<div class="collections-block-content">
+							<h3>Parking Easy Go</h3>
+							<span>HTML & CSS, Js, Json</span>
+							<p>It's a website for everybody search for parking lot in Kaohsiung. It used the open data reseased from Kaohsiung government.</p>
+							<div class="pagebutton">
+								<span class="github"><a href="https://github.com/hobbyling/parking_easygo" target="_blank">Github</a></span>
+								<span class="gotopage"><a href="http://hobbyling.github.io/web/finalterm/" target="_blank">Go to page</a></span>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div id="clear"></div>
+					</div>
+
+					<div class="wow flipInX collections-block">
+						<img src="img/resumeweb.jpg" alt="">
+						<div class="collections-block-content">
+							<h3>Resume website</h3>
+							<span>HTML & CSS, Js, Jquery, Photoshop</span>
+							<p>It's a website for everybody to know more about me.</p>
+							<div class="pagebutton">
+								<span class="github"><a href="https://github.com/hobbyling/resume" target="_blank">Github</a></span>
+								<span class="gotopage"><a href="https://hobbyling.github.io/resume/" target="_blank">Go to page</a></span>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div id="clear"></div>
+					</div>
+
+					<div class="wow flipInX collections-block">
+						<img src="img/surveyweb.jpg" alt="">
+						<div class="collections-block-content">
+							<h3>Survey website</h3>
+							<span>HTML & CSS, Js, PHP, MySQL</span>
+							<p>It's a survey website. </p>
+							<div class="pagebutton">
+								<span class="gotopage"><a href="https://140.127.220.191" target="_blank">Go to page</a></span>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div id="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			Copyright © 2016 Hobby All rights reserved
+		</footer>
+	</div>
+</body>
+</html>

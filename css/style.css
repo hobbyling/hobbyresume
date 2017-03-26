@@ -1,0 +1,1201 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}*/
+
+
+
+body{
+	background: url(../img/bg4-2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	margin:0;
+	font-family: 'Verdana', "微軟正黑體", "Arial";
+}
+
+.wrapper{   /*不在這邊設定寬度是因為內容會無法全畫面*/
+	margin:0 auto;
+}
+
+/*-------------回到頂端按鈕-----------*/
+#gotop {
+	opacity:0;
+	transition: all .2s ease;
+	pointer-events: none;
+	position: fixed;
+    right: 50px;
+    bottom: 80px;    
+    background: url(../img/go-top.png);
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+	z-index:10;
+}
+
+#gotop.gotop {
+	opacity: .5;
+	pointer-events: auto;
+	z-index:10;
+}
+
+#gotop.gotop:hover {
+	opacity: 1;
+}
+
+/*-----------------header-----------------*/
+header{
+	width: 960px;
+	height:100px; 
+	margin:0 auto;
+	line-height:100px; 
+	text-align:center; 
+}
+
+.logo{
+	display: inline;
+	height: 75px;
+	width: 161px;
+	background: url(../img/logo2.png);
+	background-repeat: no-repeat;
+	float: left;
+	margin-top: 5px;
+}
+
+header h1{
+	width: 200px;
+	font-size:36px;
+	font-weight:bold;
+	text-decoration: none;
+	float: left;
+	text-indent: -9999px;
+}
+
+/*-----menu-----*/
+.menu{
+	float: right;
+}
+
+.menu li{
+	display: inline;
+	/*float: left;*/
+	font-size: 18px;
+	margin-left: 30px;
+}
+
+.menu a{
+	transition: 0.1s ease;
+    text-decoration: none;
+    color: #444049;
+}
+
+.menu a:hover{
+    color: #73D4CA;
+ 	/*border-bottom: 3px solid #73D4CA;*/
+}
+
+#burger_button{  
+	/*漢堡選單圖示*/
+	display: none;
+}
+
+/*------------通用格式-------------*/
+.main{
+	margin: 0 auto;
+	text-align: center;
+}
+
+h2{
+	color: #3C3C3C;
+	font-size: 30px;
+	line-height: 1.33;
+	padding-top: 30px;
+}
+
+#h2white{
+	color: #e3e6d9; 
+}
+
+hr{
+	width: 100px;
+	border: none;
+	border-top: 5px solid #73d4ca;
+	margin-bottom: 50px;
+}
+
+.content_center{
+	width: 960px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+/*-----首頁-----*/
+.cover{
+	height: 90vh;
+	padding: 10px 0 10px 0; 
+	text-align: left;
+}
+
+.cover h2{ 
+	color: #FFFFFF;
+	font-size: 54px;
+	margin: 60px 0px 10px 30px;
+	/*padding-top: -30px;*/
+}
+
+.cover p{
+	color: #FFFFFF;
+	font-size: 20px;
+	line-height: 1.33;
+	margin: 20px 0px 50px 30px;
+}
+
+.gettoknowme_btn{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 20px;
+	line-height: 1.33;
+	border: 2px #FFFFFF solid;
+	border-radius: 6px;
+	padding: 15px 40px 15px 40px;
+	margin-top: 200px;
+	margin-left: 30px;
+}
+
+.gettoknowme_btn:hover{
+	background: #FFFFFF;
+	color: #73D4CA;
+}
+
+/*-----About頁面-----*/
+.about{
+	background: #b2ccc9;
+}
+
+.about img{
+	float: left;
+	width: 200px;
+	margin: 0 50px 0px 250px;
+}
+
+.about p{
+	font-size: 20px;
+	line-height: 2;
+	text-align: left;
+	margin-top: 50px;
+}
+
+/*-----Skill頁面-----*/
+.skill{
+	background: #e3e6d9;
+	text-align: center;
+}
+
+.skill_block{
+	width: 260px;
+	float: left;
+	border: solid #444049 1px;
+	border-radius:10px;
+	padding: 30px 0 30px 0;
+	margin: 0px 29px 0px 29px;
+}
+
+.skill_block:hover{
+	-webkit-box-shadow: 0px 8px 20px #444049;
+	-moz-box-shadow: 0px 8px 20px #444049;
+	box-shadow: 0px 8px 20px #444049;
+}
+
+.skill_block img{
+	height: 60px;
+}
+
+.skill_block h3{
+	color: #d7a153;
+	height: 60px;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1.33;
+	margin: 15px 20px;
+}
+
+.skill_block li{
+	margin-bottom: 5px;
+}
+
+/*-----Education頁面-----*/
+.education{
+	background: #444049;
+}
+
+.school_block{
+	width: 700px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+.school_block img{
+	width: 80px;
+	float: left;
+	margin-left: 80px;
+}
+
+.school_block:last-child{
+	padding-bottom: 0px;
+}
+
+.school_block_right{
+	float: right;
+	width: 500px;
+	text-align: left;
+	margin: 0px 0 10px 20px;
+}
+
+.school_block_right h3{
+	font-weight: bold;
+	color: #73d4ca;
+	font-size: 24px;
+	line-height: 1.33;
+}
+
+.school_block_right h4{
+	color: #e3e6d9;
+	font-size: 18px;
+	line-height: 1.33;
+}
+
+.school_block_right p{
+	color: #999b91;
+	font-size: 14px;
+	line-height: 1.33;
+}
+
+/*-----Work experience頁面-----*/
+.workexperience{
+	background: #e3e6d9;
+}
+
+.cd-container {
+	/* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.cd-container::after {  /*.cd-container最後面加入...*/
+	/* clearfix */
+	content: '';
+	display: table;
+	clear: both;
+}
+
+ #cd-timeline {
+	position: relative;
+}
+
+#cd-timeline::before {    /*在#cd-timeline前面加上中間的垂直線*/
+	/*this is the vertical line */
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%
+	margin-left: -2px;
+	height: 100%;
+	width: 5px;
+	background: #b2ccc9;
+}
+
+.cd-timeline-block {    /*方塊+中間圈圈+時間*/
+  	position: relative;
+	margin: 80px 0;
+}
+
+.cd-timeline-block:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+}
+
+.cd-timeline-block:first-child {   /*第一個.cd-timeline-block*/
+  	margin-top: 0;
+}
+
+.cd-timeline-block:last-child {    /*最後一個.cd-timeline-block*/
+ 	 margin-bottom: 0;
+}
+
+.cd-timeline-img {     /*中間垂直線上的圈圈*/
+  	position: absolute;
+  	top: 0;
+  	left: 50%;
+  	width: 40px;
+ 	height: 40px;
+  	margin-left: -20px;
+  	border-radius: 50%;
+  	box-shadow: 0 0 0 4px #FFFFFF, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+	/* Force Hardware Acceleration in WebKit */
+   	-webkit-transform: translateZ(0);
+   	-webkit-backface-visibility: hidden;	
+}
+
+.cd-timeline-img.cd-odd {   /*奇數圈圈顏色*/
+	background: #73d4ca;
+}
+
+.cd-timeline-img.cd-even {  /*偶數圈圈顏色*/
+	background: #f3b761;
+}
+
+.cd-timeline-content {  /*方塊+時間*/
+	float: left;
+	position: relative;
+  	margin-left: 0;
+  	background: white;
+  	border-radius: 5px;
+  	padding: 32px;
+  	width: 45%;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+}
+
+.cd-timeline-content:hover{
+	-webkit-box-shadow: 0px 8px 20px #444049;
+	-moz-box-shadow: 0px 8px 20px #444049;
+	box-shadow: 0px 8px 20px #444049;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content {
+   	/*偶數的靠右*/
+   	float: right;
+ }
+
+.cd-timeline-content:after {
+	content: "";
+  	display: table;
+  	clear: both;
+}
+
+.cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: white;
+}
+
+ .cd-timeline-content h3 {
+	color: #444049;
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.cd-timeline-content h4 {
+	color: #73d4ca;
+	font-size: 18px;
+  	margin-bottom: 20px;
+}
+
+.cd-timeline-content ul{
+	text-align: left;
+	list-style-type: square;
+}
+
+.cd-timeline-content ul li{
+	font-size: 16px;
+	line-height: 1.33;
+	margin: 0 0 15px 20px;
+}
+
+.cd-timeline-content::before {
+  	content: '';
+  	position: absolute;
+ 	top: 16px;
+  	right: 100%;
+  	height: 0;
+  	width: 0;
+  	border: 7px solid transparent;/*小三角形*/
+  	border-left: 7px solid white;/*小三角形*/
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+   	left: auto;
+   	right: 100%;
+   	border-color: transparent;
+   	border-right-color: white;  	
+}
+
+.cd-timeline-content .cd-date {
+  	display: inline-block;
+  	position: absolute;
+  	text-align: left;
+  	width: 100%;
+   	left: 122%;
+   	top: 6px;
+   	font-size: 20px;
+  	float: left;
+  	padding: 5px 0;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+   	right: 122%;
+   	text-align: right;
+   	font-size: 20px;
+}
+
+.cssanimations .cd-timeline-content.is-hidden {
+   	visibility: hidden;
+}
+
+.cssanimations .cd-timeline-content.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-2 0.6s;
+    -moz-animation: cd-bounce-2 0.6s;
+    animation: cd-bounce-2 0.6s;
+}
+
+/* inverse bounce effect on even content blocks */
+.cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+    -webkit-animation: cd-bounce-2-inverse 0.6s;
+    -moz-animation: cd-bounce-2-inverse 0.6s;
+    animation: cd-bounce-2-inverse 0.6s;
+}
+
+/*-----Awards頁面*/
+.awards{
+	background: #b2ccc9;
+}
+
+.awards-block {
+	width: 750px;
+	margin: 0 auto;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	border-bottom: dotted 1px #444049;
+}
+
+.awards-block:first-child{  /*最後一個不要有底線*/
+	padding-top: 0px;
+}
+
+.awards-block:last-child{  /*最後一個不要有底線*/
+	border-bottom:none;
+}
+
+.awards-pic{
+	float: left;
+}
+
+.awards-block:nth-child(odd) .awards-pic {   /*奇數圖片靠右*/
+   	float: right;
+ }
+
+.awards-pic img{
+ 	height: 60px;
+	margin: 10px 20px 10px 20px;
+ }
+
+.awards-pic p{    /*圖片下的年*/
+	color: #e3e6d9;
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.awards-content{
+	width: 650px;
+	float: left;
+	margin-top: 10px;
+}
+
+.awards-content h3{
+	color: #FFFFFF;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 1.33;
+	margin-bottom: 10px;
+}
+
+.awards-content ul{
+	list-style: square;
+	margin-left: 25px;
+}
+
+.awards-content ul li{
+	color: #444049;
+	line-height: 1.33;
+	margin-bottom: 5px;
+}
+
+/*-----Collections頁面-----*/
+.collections{
+	background: #444049;
+}
+
+.collections-block{
+	float: left;
+	width: 280px;
+	height: 100%;
+	background: #e3e6d9;
+	margin: 0 20px 0 20px;
+	padding: 0px 0 20px 0;
+}
+
+.collections-block:hover{
+	-webkit-box-shadow: 0px 8px 20px #e3e6d9;
+	-moz-box-shadow: 0px 8px 20px #e3e6d9;
+	box-shadow: 0px 0px 20px #e3e6d9;
+}
+
+.collections-block img{
+	width: 280px;
+}
+
+.collections-block-content h3{
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px 0 15px 0;
+}
+
+.collections-block-content span{
+	display: block;
+	height: 30px;
+	margin-bottom: 15px;
+	line-height: 1.33;
+	color: #f3b761;
+}
+
+.collections-block-content p{
+	display: block;
+	height: 85px;
+	font-size: 16px;
+	line-height: 1.33;
+	padding: 0 5px 0 5px;
+	margin-bottom: 30px;
+}
+
+.pagebutton{
+	width: 100px;
+	height: 30px;
+	margin: 0 auto;
+}
+
+.github, .gotopage{
+	float: left;
+}
+
+.github a{
+	background: url(../img/github_black.png);
+	display: block;
+	font-size: 0;
+	height: 30px;
+	width: 30px;
+}
+
+.github a:hover{
+	background: url(../img/github_blue.png);
+}
+
+.gotopage a{
+	background: url(../img/go_black.png);
+	display: block;
+	font-size: 0;
+	height: 30px;
+	width: 30px;
+	margin-left: 40px;
+}
+
+.gotopage a:hover{
+	background: url(../img/go_blue.png);
+}
+
+/*------------------------footer---------------------*/
+footer{
+	line-height:40px; 
+	text-align:center; 
+	color: #444049;
+	font-size: 20px;
+}
+
+
+/*-----清除------*/
+.clear{
+    clear: both;
+ }
+
+ #clear{   /*RWD清浮動*/
+ 	display: none;
+ }
+
+@media only screen and (max-width: 768px) {
+	.wrapper {
+		width: 768px; 
+	}
+
+	header{
+		width: 768px;
+	}
+
+	/*-----Menu-----*/
+	#burger_button{
+		display: block;
+		float: right;
+		margin: 20px 0 0 0;
+		background-color:transparent;
+		border:none;
+		cursor:pointer;   /*改變滑鼠游標的形狀*/
+	}
+
+	#burger_button img{
+		height: 40px;
+		width: 40px;
+		margin-right: 30px;
+	}
+
+	.menu{
+		display: none;
+		width: 300px;
+		float: right;
+		margin-right: 5px;
+		background: #444049;
+		opacity: 0.8;
+		z-index: 999; 
+		margin: 0;
+		padding: 0;
+	}
+
+	.menu li{
+		display: block;
+		float: none;
+		border-bottom: 1px dashed #000000;
+		/*z-index: 999; */
+		margin: 0;
+		padding: 0;
+	}
+	
+	.menu a{	
+		color: #E3E6D9;
+	}
+
+	.menu a:hover{
+	    color: #608150;
+	 	/*border-bottom: 3px solid #73D4CA;*/
+	}
+
+	.menu li:hover{
+		background: #E3E6D9;
+	}
+	/*-----通用格式-----*/
+	.content_center{
+		width: 768px;
+		margin: 0 auto;
+	}
+
+	hr{
+		margin-bottom: 20px;
+	}
+
+	/*-----首頁-----*/
+	.cover{
+		height: 90vh;
+		width: 768px;
+	}
+
+	.cover h2{
+		margin: 20px 0px 10px 30px;
+	}
+
+	.cover p{
+		margin: 20px 0px 50px 30px;
+	}
+
+	/*-----About頁面-----*/
+	.about img{
+		width: 200px;
+		margin: 0 30px 0px 150px;
+	}
+
+	.about p{
+		font-size: 18px;
+	}
+
+	/*-----Skill頁面-----*/
+	.skill_block{
+		width: 210px;
+		padding: 30px 0 30px 0;
+		margin: 30px 20px 0px 20px;
+	}
+
+	.skill_block img{
+		height: 40px;
+	}
+
+	.skill_block h3{
+		color: #d7a153;
+		height: 40px;
+		font-size: 20px;
+		margin: 15px 0px 20px 0;
+	}
+
+	/*-----Education頁面-----*/
+	.school_block{
+		padding-top: 20px;
+	}
+
+	/*-----Work experience頁面*/
+	#cd-timeline {
+		position: relative;
+		padding: 20px 0;
+	}
+
+	#cd-timeline::before {
+		/*this is the vertical line */
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 18px;
+		height: 100%;
+		width: 4px;
+		background: #b2ccc9;
+	}
+
+	.cd-timeline-block{
+		width: 768px;
+	  	position: relative;
+	  	margin: 20px 0;
+	}
+
+	.cd-timeline-img {
+		width: 20px;
+ 		height: 20px;
+	  	left: 0;
+	  	margin-top: 10px;
+	  	margin-left: 9px;
+	}
+	
+	.cd-timeline-content {
+	  	margin-left: 60px;
+	  	padding: 20px;
+	  	width: 90%;
+	}
+
+	.cd-timeline-content::before {
+	  left: auto;
+	  border-right: 7px solid white;/*小三角形*/
+	  border-left: none;
+	}
+
+	.cd-timeline-block:nth-child(even) .cd-timeline-content{
+		float: none;
+	}
+
+	.cd-timeline-content:after {
+		content: "";
+	  	display: table;
+	  	clear: both;
+	}
+
+  	.cd-timeline-content h3 {
+   		font-size: 24px;
+  	}
+
+ 	.cd-timeline-content .cd-date {
+	  	display: inline-block;
+	  	position: static;
+	  	float: left;
+	  	padding: 16px 0;
+    	font-size: 20px;
+    	text-align: center;
+  	}
+
+  	.cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date{
+		text-align: center;
+	}
+
+	/*-----Awards頁面*/
+	.awards-block {
+		width: 700px;
+	}
+
+	.awards-pic img{
+	 	height: 100px;
+		margin: 10px 20px 10px 20px;
+	 }
+
+	.awards-pic p{    /*圖片下的年*/
+		font-size: 24px;
+	}
+
+	.awards-content{
+		width: 550px;
+	}
+
+	/*-----Collections頁面-----*/
+	.collections-block{
+		float: none;
+		width: 700px;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		padding: 0;
+	}
+
+	.collections-block img{
+		width: 280px;
+		float: left;
+	}
+
+	.collections-block-content{
+		width: 420px;
+		float: right;
+	}
+
+	.collections-block-content span{
+		height: 28px;
+		margin-bottom: 10px;
+	}
+
+	.collections-block-content p{
+		height: 85px;
+		font-size: 15px;
+		padding: 0 5px 0 5px;
+		margin-bottom: 0px;
+	}
+
+	.pagebutton{
+		width: 130px;
+		height: 50px;
+	}
+
+	.github a{
+		background: url(../img/github_black_40.png);
+		height: 40px;
+		width: 40px;
+	}
+
+	.github a:hover{
+		background: url(../img/github_blue_40.png);
+	}
+
+	.gotopage a{
+		background: url(../img/go_black_40.png);
+		height: 40px;
+		width: 40px;
+		margin-left: 50px;
+	}
+
+	.gotopage a:hover{
+		background: url(../img/go_blue_40.png);
+	}
+
+	#clear{
+	 	display: block;
+	 	clear: both;
+	 }
+
+}
+
+@media only screen and (max-width: 320px) {
+	.wrapper {
+		width: 320px; 
+	}
+	
+	/*-----回到頂端-----*/
+	#gotop {
+		position: fixed;
+	    right: 40px;
+	    bottom: 80px;    
+	    background: url(../img/go-top_40.png);
+	    height: 40px;
+	    width: 40px;
+	    cursor: pointer;
+		z-index:10;
+	}
+
+	/*-----header-----*/
+	header{
+		width: 320px;
+	}
+
+	#burger_button img{
+		margin-right: 10px;
+	}
+
+	.menu{
+		margin-right: 0px;
+		width: 320px;
+		float: none;
+	}
+
+	/*-----通用格式-----*/
+	.content_center{
+		width: 320px;
+	}
+
+	hr{
+		margin-bottom: 10px;
+	}
+
+	/*-----首頁-----*/
+	.cover{
+		width: 320px;
+		text-align: center;
+	}
+
+	.cover h2{
+		font-size: 35px;
+		margin: 10px 0px 10px 0px;
+	}
+
+	.cover p{
+		font-size: 22px;
+		line-height: 1.5;
+		margin: 20px 0px 50px 0px;
+	}
+
+	.gettoknowme_btn{
+		margin: 180px 0 0 0;
+	}
+
+	.gettoknowme_btn:hover{
+		background: #FFFFFF;
+		color: #73D4CA;
+	}
+
+	/*-----About頁面-----*/
+	.about img{
+		float: none;
+		width: 150px;
+		margin: 0 0px 0px 0px;
+	}
+
+	.about p{
+		font-size: 20px;
+		line-height: 2;
+		text-align: center;
+		margin-top: 30px;
+	}
+	
+	/*-----Skill頁面-----*/
+	.skill_block{
+		float: none;
+		width: 290px;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		padding: 5px 0 5px 0;
+	}
+
+	.skill_block:last-child{
+		margin-bottom: 0px;
+	}
+
+	.skill_block img{
+		display: none;
+		height: 50px;
+	}
+
+	.skill_block h3{
+		height: 30px;
+		font-size: 20px;
+		margin: 10px 0px 10px 0;
+	}
+	
+	/*-----Education頁面-----*/
+	.school_block{
+		width: 320px;
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+
+	.school_block img{
+		width: 70px;
+		float: none;
+		margin-left: 0px;
+	}
+
+	.school_block_right{
+		float: none;
+		width: 310px;
+		text-align: center;
+		margin: 0px 0 10px 0px;
+	}
+
+	.school_block_right h3{
+		font-size: 20px;
+	}
+
+	.school_block_right h4{
+		font-size: 14px;
+	}
+
+	.school_block_right p{
+		font-size: 12px;
+	}
+
+	/*-----Work experience頁面*/
+	.cd-timeline-block{
+		width: 320px;
+	}
+
+	.cd-timeline-content {
+	  	margin-left: 45px;
+	  	padding: 10px;
+	  	width: 82%;
+	}
+
+  	.cd-timeline-content h3 {
+   		font-size: 24px;
+  	}
+
+  	/*-----Awards頁面*/
+	.awards-block {
+		width: 320px;
+	}
+
+	.awards-pic{
+		float: none;
+		text-align: center;
+	}
+
+	.awards-block:nth-child(odd) .awards-pic {   /*奇數圖片靠右*/
+	   	float: none;
+	 }
+	
+	.awards-pic img{
+	 	height: 90px;
+		margin: 0px 0px 5px 0px;
+	 }
+
+	.awards-pic p{    /*圖片下的年*/
+		display: none;
+	}
+
+	.awards-content{
+		width: 300px;
+		float: none;
+		margin-top: 10px;
+		margin: 0 auto;
+	}
+
+	.awards-content h3{
+		font-size: 20px;
+		text-align: center;
+	}
+
+	/*-----Collections頁面-----*/
+	.collections-block{
+		float: none;
+		width: 280px;
+		margin-top: 20px;
+	}
+
+	.collections-block img{
+		float: none;
+	}
+
+	.collections-block-content{
+		width: 280px;
+		float: none;
+	}
+
+	.collections-block-content h3{
+		font-size: 20px;
+		padding: 10px 0 15px 0;
+	}
+
+	.pagebutton{
+		width: 130px;
+		height: 40px;
+		margin: 0 auto;
+		padding-bottom: 10px;
+	}
+
+	.github, .gotopage{
+		float: left;
+	}
+
+	.github a{
+		background: url(../img/github_black_40.png);
+		display: block;
+		font-size: 0;
+		height: 40px;
+		width: 40px;
+	}
+
+	.github a:hover{
+		background: url(../img/github_blue_40.png);
+	}
+
+	.gotopage a{
+		background: url(../img/go_black_40.png);
+		display: block;
+		font-size: 0;
+		height: 40px;
+		width: 40px;
+		margin-left: 50px;
+	}
+
+	.gotopage a:hover{
+		background: url(../img/go_blue_40.png);
+	}
+
+	/*------------------------footer---------------------*/
+	footer{
+		font-size: 12px;
+	}
+}
