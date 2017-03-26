@@ -951,7 +951,7 @@ footer{
 
 @media only screen and (max-width: 480px) {
 	.wrapper {
-		width: 320px; 
+		width: 480px; 
 	}
 	
 	/*-----回到頂端-----*/
@@ -968,7 +968,7 @@ footer{
 
 	/*-----header-----*/
 	header{
-		width: 320px;
+		width: 480px;
 	}
 
 	#burger_button img{
@@ -977,13 +977,13 @@ footer{
 
 	.menu{
 		margin-right: 0px;
-		width: 320px;
+		width: 480px;
 		float: none;
 	}
 
 	/*-----通用格式-----*/
 	.content_center{
-		width: 320px;
+		width: 480px;
 	}
 
 	hr{
@@ -992,7 +992,7 @@ footer{
 
 	/*-----首頁-----*/
 	.cover{
-		width: 320px;
+		width: 480px;
 		text-align: center;
 	}
 
@@ -1033,7 +1033,7 @@ footer{
 	/*-----Skill頁面-----*/
 	.skill_block{
 		float: none;
-		width: 290px;
+		width: 350px;
 		margin: 0 auto;
 		margin-top: 20px;
 		margin-bottom: 10px;
@@ -1057,7 +1057,7 @@ footer{
 	
 	/*-----Education頁面-----*/
 	.school_block{
-		width: 320px;
+		width: 480px;
 		padding-top: 20px;
 		padding-bottom: 30px;
 	}
@@ -1070,7 +1070,7 @@ footer{
 
 	.school_block_right{
 		float: none;
-		width: 310px;
+		width: 470px;
 		text-align: center;
 		margin: 0px 0 10px 0px;
 	}
@@ -1089,13 +1089,13 @@ footer{
 
 	/*-----Work experience頁面*/
 	.cd-timeline-block{
-		width: 320px;
+		width: 480px;
 	}
 
 	.cd-timeline-content {
 	  	margin-left: 45px;
 	  	padding: 10px;
-	  	width: 82%;
+	  	width: 85%;
 	}
 
   	.cd-timeline-content h3 {
@@ -1104,7 +1104,7 @@ footer{
 
   	/*-----Awards頁面*/
 	.awards-block {
-		width: 320px;
+		width: 480px;
 	}
 
 	.awards-pic{
@@ -1116,17 +1116,17 @@ footer{
 	   	float: none;
 	 }
 	
+	.awards-pic p{    /*圖片下的年*/
+		display: none;
+	}
+
 	.awards-pic img{
 	 	height: 90px;
 		margin: 0px 0px 5px 0px;
 	 }
 
-	.awards-pic p{    /*圖片下的年*/
-		display: none;
-	}
-
 	.awards-content{
-		width: 300px;
+		width: 400px;
 		float: none;
 		margin-top: 10px;
 		margin: 0 auto;
@@ -1197,5 +1197,62 @@ footer{
 	/*------------------------footer---------------------*/
 	footer{
 		font-size: 12px;
+	}	
+}
+
+@media only screen and (max-width: 320px) {
+	.wrapper {
+		width: 320px; 
+	}
+
+	/*-----header-----*/
+	header{
+		width: 320px;
+	}
+
+	.menu{
+		width: 320px;
+	}
+
+	/*-----通用格式-----*/
+	.content_center{
+		width: 320px;
+	}
+
+	/*-----首頁-----*/
+	.cover{
+		width: 320px;
+	}
+	
+	/*-----Skill頁面-----*/
+	.skill_block{
+		width: 290px;
+	}
+
+	/*-----Education頁面-----*/
+	.school_block{
+		width: 320px;
+	}
+
+	.school_block_right{
+		width: 310px;
+	}
+
+	/*-----Work experience頁面*/
+	.cd-timeline-block{
+		width: 320px;
+	}
+
+	.cd-timeline-content {
+	  	width: 82%;
+	}
+
+  	/*-----Awards頁面*/
+	.awards-block {
+		width: 320px;
+	}
+
+	.awards-content{
+		width: 300px;
 	}
 }
